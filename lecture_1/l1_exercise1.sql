@@ -1,0 +1,3 @@
+-- Question: select any two columns of you choice and limit the result to only 20 rows
+-- Question: Find top 5 movies with the shorest run_time
+-- Question: Write a query to find the maximum run time from the pixar_films table
