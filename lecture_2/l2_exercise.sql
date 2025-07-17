@@ -1,0 +1,6 @@
+-- Import the table box_office keeping the budget columns as varchar.
+-- Question: Calculate the profit percentage for each film. Hint: Profit percentage is calculated as (profit / budget) * 100
+-- Question: Find top 10 films with the highest profit percentage.
+-- Question: Find films with a budget greater than $100 million and a profit percentage greater than 50%.
+-- Question: How much did the movie "The Incredibles" made worldwide? (Only display the amount)
+-- Question: How many films earned profit more then 3 times their budget in box office revenue worldwide?
