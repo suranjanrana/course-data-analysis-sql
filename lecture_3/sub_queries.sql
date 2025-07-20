@@ -1,8 +1,9 @@
 -- This query calculates the profit and profit percentage for Pixar films
 -- Since the budget and other columns are stored as varchar, we need to convert it to numeric.
 -- The handling of 'NA' values and data type conversion is done in a subquery.
+-- For the data type conversion, we have used the numeric data type instead of float.
     -- numeric can store a larger range of values and is suitable for financial calculations.
-    -- numeric data type is like float but with fixed precision and scale.
+    -- numeric data type is like float but is more precise.
     -- Syntax: numeric(percision, scale). Example: numeric(6, 4) can store numbers up to 6 digits with 4 digits after the decimal point like 23.1234.
     -- The data type float / double precision is inexact while the data type numeric is exact.
     -- Inexact means that some values cannot be converted exactly to the internal format and are stored as approximations which can lead to rounding errors in financial calculations.
@@ -11,19 +12,20 @@
 -- The box office columns are also converted to numeric for consistency.
 -- The profit percentage is calculated as (profit / budget) * 100 where, profit = box_office_worldwide - budget
 -- The results are rounded to 2 decimal places for better readability
+-- Here, we are selecting all columns from the subquery and calculating the profit and profit percentage.
 select
     *,
     box_office_worldwide - budget as profit,
     round((box_office_worldwide - budget) / budget, 2) as profit_percentage -- rounding to 2 decimal places
 -- this is a subquery
 from (
-	select
-		film,
-		nullif(budget, 'NA')::numeric as budget,
-		box_office_us_canada::numeric as box_office_us_canada,
+    select
+        film,
+        nullif(budget, 'NA')::numeric as budget,
+        box_office_us_canada::numeric as box_office_us_canada,
         box_office_other::numeric as box_office_other,
         box_office_worldwide::numeric as box_office_worldwide
-	from pixar.box_office
+    from pixar.box_office
 );
 
 
@@ -38,13 +40,12 @@ from (
 -- The limit is set to 10 to get the top 10 films.
 select film
 from (
-	select
-		film,
-		nullif(budget, 'NA')::numeric as budget, -- using nullif to convert the text value 'NA' to null
-		box_office_us_canada::numeric as box_office_us_canada,
-        box_office_other::numeric as box_office_other,
+    -- selecting only the required columns in the subquery
+    select
+        film,
+        nullif(budget, 'NA')::numeric as budget, -- using nullif to convert the text value 'NA' to null
         box_office_worldwide::numeric as box_office_worldwide
-	from pixar.box_office
+    from pixar.box_office
 )
 order by ((box_office_worldwide - budget) / budget) desc nulls last -- using nulls last to place null values at the end
 limit 10; -- limiting the results to get the top 10 films
@@ -60,13 +61,11 @@ select
     film,
     round((box_office_worldwide - budget) / budget * 100, 2) as profit_percentage
 from (
-	select
-		film,
-		nullif(budget, 'NA')::numeric as budget,
-		box_office_us_canada::numeric as box_office_us_canada,
-        box_office_other::numeric as box_office_other,
+    select
+        film,
+        nullif(budget, 'NA')::numeric as budget,
         box_office_worldwide::numeric as box_office_worldwide
-	from pixar.box_office
+    from pixar.box_office
 )
 where budget > 100000000 and ((box_office_worldwide - budget) / budget) > 5;
 
@@ -84,12 +83,10 @@ where budget > 100000000 and ((box_office_worldwide - budget) / budget) > 5;
     -- 3. and finally the count() function calculates the number of films
 select count(*) as films_with_high_profit
 from (
-	select
-		film,
-		nullif(budget, 'NA')::numeric as budget,
-		box_office_us_canada::numeric as box_office_us_canada,
-        box_office_other::numeric as box_office_other,
+    select
+        film,
+        nullif(budget, 'NA')::numeric as budget,
         box_office_worldwide::numeric as box_office_worldwide
-	from pixar.box_office
+    from pixar.box_office
 )
 where (box_office_worldwide - budget) > 3 * budget; -- filtering films with profit more than 3 times their budget
