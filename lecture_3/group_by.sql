@@ -35,8 +35,8 @@ group by category;
 -- The result will show the genre and the total number of films for each genre in the pixar.genres table.
 -- This is useful to understand how many films belong to each genre.
 select
-	value,
-	count(film) as total_films
+    value,
+    count(film) as total_films
 from pixar.genres
 where category = 'Genre'
 group by 1 -- group by 1 denotes grouping by the first column in the select statement, which is 'value'
