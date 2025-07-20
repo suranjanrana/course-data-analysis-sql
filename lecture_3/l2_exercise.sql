@@ -1,0 +1,10 @@
+-- Question: Find the shortest film from the pixar_films table.
+-- Question: Find the number of movies under each film_rating from the pixar_films table.
+-- Question: Find the average run time of all the films by film_rating from the pixar_films table.
+-- Question: Find all the films which have the production budget greater than the average budget of all films.
+-- Question: Find the total box office revenue of the 'Toy Story' franchise.
+-- Question: Find the film with the lowest box office revenue in the 'Toy Story' franchise.
+-- Question: Find the name of the film about 'house' and 'balloon'.
+-- Question: Find the genre with the highest number of films.
+-- Question: Find the sub-genre with the highest number of films.
+-- Question: What are the films that are focused on 'teen' genre?
