@@ -192,7 +192,7 @@ GROUP BY deptid;
 
 ---
 
-## Extra Notes for Students 📝
+## 📝 Notes
 
 * **String cleaning**: Always check for case (`UPPER`/`LOWER`) and spaces (`TRIM`).
 * **Numeric rounding**: Round carefully in financial reports; sometimes exact values are required.

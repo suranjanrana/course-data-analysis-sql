@@ -152,7 +152,7 @@ FROM employees;
 
 ---
 
-## 📝 Notes to Remember
+## 📝 Notes
 
 * Always use `SELECT column_names` instead of `SELECT *` in real-world analysis (more efficient, clearer).
 * Use `WHERE` carefully — it’s the most common way to filter data.
@@ -163,14 +163,3 @@ FROM employees;
   * SQL Server uses `TOP`.
 
 ---
-
-<!-- ## 📝 Notes to Remember
-
-1. Always start with `CREATE DATABASE` and `USE` it before creating tables.
-2. Use **Primary Keys** to uniquely identify rows.
-3. `VARCHAR(n)` → `n` defines the maximum characters allowed.
-4. `DECIMAL(m,n)` → `m` = total digits, `n` = digits after decimal.
-5. `DROP` is permanent ❌ (be careful).
-6. Different SQL systems (MySQL, PostgreSQL, SQL Server, Oracle) have slightly different syntax.
-
---- -->

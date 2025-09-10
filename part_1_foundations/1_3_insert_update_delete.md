@@ -44,7 +44,7 @@ VALUES
 -- Two new orders are added at the same time
 ```
 
-👉 **Note for Analysts:** Inserting multiple rows in one query is faster than inserting one by one.
+📝 **Note** Inserting multiple rows in one query is faster than inserting one by one.
 
 ---
 
@@ -94,7 +94,7 @@ WHERE deptid = 2;
 -- Increases salary of all IT department employees by 5%
 ```
 
-👉 **Note for Analysts:**
+📝 **Note**
 Updating data permanently changes it. Always double-check your `WHERE` condition.
 
 ---
@@ -140,7 +140,7 @@ DELETE FROM sales.orders;
 -- Removes ALL orders (but keeps the table structure)
 ```
 
-⚠️ **Note for Analysts:**
+📝 **Note**
 
 * `DELETE` removes rows but keeps the table.
 * `DROP TABLE` removes the entire table structure — avoid this unless necessary.
@@ -172,6 +172,6 @@ ROLLBACK; -- undoes both update and delete if you change your mind
 -- Use COMMIT instead if you want to save
 ```
 
-👉 **Note for Analysts:** Transactions are very handy when testing queries on real databases.
+📝 **Note** Transactions are very handy when testing queries on real databases.
 
 ---

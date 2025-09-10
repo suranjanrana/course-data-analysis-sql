@@ -17,9 +17,11 @@
   * `hr` schema → employee tables
   * `sales` schema → sales-related tables
 
-👉 **Note for Analysts:** You don’t always create schemas, but you will often query tables **inside schemas**.
-In PostgreSQL, the default schema is `public`.
-In SQL Server, the default schema is `dbo`.
+📝 **Note for Analysts:**
+
+* You don’t always create schemas, but you will often query tables **inside schemas**.
+* In PostgreSQL, the default schema is `public`.
+* In SQL Server, the default schema is `dbo`.
 
 ---
 
@@ -212,3 +214,16 @@ You will **rarely** drop databases or schemas — that’s usually an admin’s 
 | UUID         | `UUID`                                                    | For unique IDs across systems.             |
 | JSON / JSONB | `JSON`, `JSONB`                                           | For semi-structured data.                  |
 | Others       | `BYTEA` (binary), `ARRAY`, `ENUM`                         | Useful for special cases.                  |
+
+---
+
+## 📝 Notes
+
+1. Always start with `CREATE DATABASE` and `USE` it before creating tables.
+2. Use **Primary Keys** to uniquely identify rows.
+3. `VARCHAR(n)` → `n` defines the maximum characters allowed.
+4. `DECIMAL(m,n)` → `m` = total digits, `n` = digits after decimal.
+5. `DROP` is permanent ❌ (be careful).
+6. Different SQL systems (MySQL, PostgreSQL, SQL Server, Oracle) have slightly different syntax.
+
+---

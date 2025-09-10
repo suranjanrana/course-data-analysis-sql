@@ -40,7 +40,7 @@ FROM hr.employees e   -- e is alias for employees
 JOIN hr.departments d ON e.deptid = d.deptid;
 ```
 
-👉 **Note:** Aliases don’t change the actual table/column, just the display in the query.
+📝 **Note:** Aliases don’t change the actual table/column, just the display in the query.
 
 ---
 
@@ -152,7 +152,7 @@ FROM hr.employees
 WHERE firstname ILIKE 'a%';  -- matches Alice, alice
 ```
 
-👉 **Note:**
+📝 **Note:**
 
 * `%` matches **any sequence** of characters. `LIKE 'A%'` means “starts with A”. `%` is a wildcard.
 * `_` matches exactly **one character** (try `LIKE 'B_b'` → matches "Bob").
@@ -209,7 +209,7 @@ FROM hr.employees
 ORDER BY salary DESC;
 ```
 
-👉 **Note:**
+📝 **Note:**
 
 * In Postgres/MySQL: use `LIMIT`.
 * In SQL Server: use `TOP`.
