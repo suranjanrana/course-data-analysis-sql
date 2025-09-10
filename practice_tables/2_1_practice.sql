@@ -1,3 +1,5 @@
+-- Adding some extra data in orders to see aggregates better.
+
 INSERT INTO sales.orders VALUES
 (1005, 1, 300, '2023-01-15'),
 (1006, 2, 450, '2023-02-20'),

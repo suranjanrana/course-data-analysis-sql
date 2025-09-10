@@ -3,8 +3,8 @@
 
 ## Practice Tables
 
-We’ll expand our **companydb** database with two schemas: `hr` and `sales`.  
-Please find the query in the folder *practice_tables*.
+We’ll create a small sample database (`companydb`) with a schema: `hr`.  
+*Please find the query in the folder **practice_tables**.*
 
 ---
 
@@ -61,6 +61,6 @@ Using the `employees` table:
 
 ### MCQ answers
 
-1. **Answer:** b) SELECT
-2. **Answer:** b) --
-3. **Answer:** c) HTML
+1. ✅ **Answer:** b) SELECT
+2. ✅ **Answer:** b) --
+3. ✅ **Answer:** c) HTML

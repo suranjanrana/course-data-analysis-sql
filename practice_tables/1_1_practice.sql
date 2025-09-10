@@ -1,29 +1,31 @@
--- We’ll create a small sample database (`companydb`) with two tables: `departments` and `employees`.
+-- We’ll create a small sample database (`companydb`) with a schema: `hr`.
+-- This schema will contain two tables: `departments` and `employees`.
 
--- Create Departments table
-CREATE TABLE departments (
+-- Create Schemas
+CREATE SCHEMA hr;
+
+-- Create HR Tables
+CREATE TABLE hr.departments (
     deptid INT PRIMARY KEY,
     deptname VARCHAR(50) NOT NULL
 );
 
--- Create Employees table
-CREATE TABLE employees (
+-- The `employees` table will reference the `departments` table via a foreign key.
+CREATE TABLE hr.employees (
     empid INT PRIMARY KEY,
     firstname VARCHAR(50),
     lastname VARCHAR(50),
     deptid INT,
     salary DECIMAL(10,2),
-    FOREIGN KEY (deptid) REFERENCES departments(deptid)
+    hire_date DATE,
+    FOREIGN KEY (deptid) REFERENCES hr.departments(deptid)
 );
 
--- Insert Departments
-INSERT INTO departments (deptid, deptname) VALUES
-(1, 'HR'),
-(2, 'IT'),
-(3, 'Sales');
+-- Insert Sample Data
+INSERT INTO hr.departments VALUES
+(1, 'HR'), (2, 'IT'), (3, 'Sales');
 
--- Insert Employees
-INSERT INTO employees (empid, firstname, lastname, deptid, salary) VALUES
-(1, 'Alice', 'Taylor', 1, 60000),
-(2, 'Bob', 'Nguyen', 2, 75000),
-(3, 'Clara', 'Khan', 3, 50000);
+INSERT INTO hr.employees VALUES
+(1, 'Alice', 'Taylor', 1, 60000, '2021-01-10'),
+(2, 'Bob', 'Nguyen', 2, 75000, '2020-03-15'),
+(3, 'Clara', 'Khan', 3, 50000, '2022-07-01');

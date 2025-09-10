@@ -27,7 +27,6 @@ We’ll continue using the same schemas (`hr` and `sales`) and tables (`employee
    * b) UPDATE
    * c) DELETE
    * d) CREATE
-     **Answer:** a) INSERT
 
 2. Which keyword is **strongly recommended** in UPDATE and DELETE statements?
 
@@ -35,7 +34,6 @@ We’ll continue using the same schemas (`hr` and `sales`) and tables (`employee
    * b) TOP
    * c) WHERE
    * d) SET
-     **Answer:** c) WHERE
 
 3. What does the ROLLBACK command do?
 
@@ -43,7 +41,6 @@ We’ll continue using the same schemas (`hr` and `sales`) and tables (`employee
    * b) Reverses changes in a transaction
    * c) Deletes a table
    * d) Switches database
-     **Answer:** b) Reverses changes in a transaction
 
 ---
 
@@ -53,3 +50,9 @@ We’ll continue using the same schemas (`hr` and `sales`) and tables (`employee
 2. Write a query to delete an employee named "David Lee".
 
 ---
+
+### Answers
+
+1. ✅ **Answer:** a) INSERT
+2. ✅ **Answer:** c) WHERE
+3. ✅ **Answer:** b) Reverses changes in a transaction

@@ -1,4 +1,4 @@
-# Topic 7 — JOINS (INNER, LEFT, RIGHT, FULL)
+# Topic 7 — JOINS I (INNER, LEFT, RIGHT, FULL)
 
 ## 7.1 What is a JOIN?
 
@@ -47,7 +47,7 @@ NATURAL JOIN table2;
 
 ---
 
-## Example Tables
+## Practice Tables
 
 We’ll add more data in department and employees table:
 
@@ -199,7 +199,7 @@ GROUP BY e.firstname, d.deptname;
 * When aggregating with joins, use **LEFT JOIN** if you want to keep categories with zero counts.
 * Watch out for **duplicate rows** when joining — if there are multiple matches, results multiply.
 
-## Realistic Analyst Scenarios
+## Other examples
 
 ### Scenario 1 — Find employees without departments
 

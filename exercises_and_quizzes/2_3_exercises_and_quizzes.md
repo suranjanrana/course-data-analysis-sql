@@ -3,10 +3,13 @@
 
 ## Practice Tables
 
-We’ll continue using:
+We’ll be using:
 
+* `hr.department`
 * `hr.employees`
-* `sales.orders`
+
+We’ll add more data in department and employees table.  
+*Please find the query in the folder **practice_tables**.*
 
 ---
 
@@ -74,9 +77,7 @@ We’ll continue using:
 
 ### Answers
 
-1. Answer: c) INNER JOIN
-2. Answer: a) LEFT JOIN
-3. Answer: c) FULL JOIN
-4. Answer: b) NATURAL JOIN
-
----
+1. ✅ **Answer**: c) INNER JOIN
+2. ✅ **Answer**: a) LEFT JOIN
+3. ✅ **Answer**: c) FULL JOIN
+4. ✅ **Answer**: b) NATURAL JOIN

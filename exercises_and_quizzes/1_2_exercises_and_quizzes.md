@@ -2,8 +2,8 @@
 
 ## Practice Tables
 
-We’ll create a small sample database (`companydb`) with two tables: `departments` and `employees`.  
-*Please find the query in the folder practice_tables*.
+We’ll expand our **companydb** database with a new schema: `sales`.  
+*Please find the query in the folder **practice_tables**.*
 
 ---
 
@@ -32,7 +32,6 @@ We’ll create a small sample database (`companydb`) with two tables: `departmen
    * b) main
    * c) public
    * d) default
-     **Answer:** c) public
 
 2. In MySQL, a **schema** is the same as a:
 
@@ -40,7 +39,6 @@ We’ll create a small sample database (`companydb`) with two tables: `departmen
    * b) table
    * c) column
    * d) schema (they’re different)
-     **Answer:** a) database
 
 3. Which command deletes an entire schema in PostgreSQL?
 
@@ -48,7 +46,6 @@ We’ll create a small sample database (`companydb`) with two tables: `departmen
    * b) DROP SCHEMA hr CASCADE;
    * c) DELETE SCHEMA hr;
    * d) ERASE SCHEMA hr;
-     **Answer:** b) DROP SCHEMA hr CASCADE;
 
 ---
 
@@ -58,3 +55,9 @@ We’ll create a small sample database (`companydb`) with two tables: `departmen
 2. Why do we use schemas in databases?
 
 ---
+
+### Answers
+
+1. ✅ **Answer:** c) public
+2. ✅ **Answer:** a) database
+3. ✅ **Answer:** b) DROP SCHEMA hr CASCADE;

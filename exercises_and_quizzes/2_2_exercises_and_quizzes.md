@@ -1,4 +1,3 @@
-
 # Exercises & Quizzes
 
 ## Practice Tables
@@ -42,7 +41,6 @@ We’ll continue using:
    * b) HAVING
    * c) ORDER BY
    * d) GROUP
-     **Answer:** b) HAVING
 
 2. Which function gives the highest value in a column?
 
@@ -50,7 +48,6 @@ We’ll continue using:
    * b) HIGH()
    * c) TOP()
    * d) UPPER()
-     **Answer:** a) MAX()
 
 3. Which is true about `COUNT(column)`?
 
@@ -58,7 +55,6 @@ We’ll continue using:
    * b) Ignores NULL values
    * c) Returns only distinct values
    * d) Only works with integers
-     **Answer:** b) Ignores NULL values
 
 ---
 
@@ -68,3 +64,9 @@ We’ll continue using:
 2. Explain the difference between `WHERE` and `HAVING`.
 
 ---
+
+### Answers
+
+1. ✅ **Answer:** b) HAVING
+2. ✅ **Answer:** a) MAX()
+3. ✅ **Answer:** b) Ignores NULL values

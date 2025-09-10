@@ -18,7 +18,8 @@ Please download the "**Pixar Films**" data from the following website:
    2. [**Creating \& Managing Databases and Schemas**](part_1_foundations/1_2_creating_and_managing_databases.md)
       1. Creating databases
       2. Schemas \& tables
-      3. Data types (common across databases)Constraints (NOT NULL, UNIQUE, PRIMARY KEY, FOREIGN KEY, DEFAULT, CHECK)
+      3. Data types (common across databases)
+      4. Constraints (NOT NULL, UNIQUE, PRIMARY KEY, FOREIGN KEY, DEFAULT, CHECK)
    3. [**Inserting, Updating, and Deleting Data**](part_1_foundations/1_3_insert_update_delete.md)
       1. INSERT (single \& multiple rows)
       2. UPDATE with conditions
@@ -33,9 +34,10 @@ Please download the "**Pixar Films**" data from the following website:
 2. **Part 2 — Intermediate Querying**
    1. [****Functions in SQL** (String, Numeric, Date, Aggregate)**](part_2_intermediate_querying/2_1_functions_in_sql.md)
    2. [GROUP BY and Aggregation](part_2_intermediate_querying/2_2_grouping_and_aggregation.md)
-   3. ****Joins** (INNER, LEFT, RIGHT, FULL)**
-   4. Subqueries
-   5. Set Operations (UNION, INTERSECT, EXCEPT)
+   3. ****Joins I** (INNER, LEFT, RIGHT, FULL)
+   4. ****Joins II** (SELF JOIN, CROSS JOIN)
+   5. Subqueries
+   6. Set Operations (UNION, INTERSECT, EXCEPT)
 3. **Part 3 — Analyst-Oriented Advanced Topics**
    1. Window Functions
    2. CTEs (Common Table Expressions)

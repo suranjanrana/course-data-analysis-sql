@@ -7,17 +7,8 @@ We keep using:
 * `hr.employees`
 * `sales.orders`
 
-(Add some extra data in orders to see aggregates better.)
-
-```sql
--- Insert sample orders
-INSERT INTO sales.orders VALUES
-(1005, 1, 300, '2023-01-15'),
-(1006, 2, 450, '2023-02-20'),
-(1007, 3, 150, '2023-03-12'),
-(1008, 4, 700, '2023-04-10'),
-(1009, 5, 1200, '2023-05-01');
-```
+We'll be adding some extra data in orders to see aggregates better.  
+*Please find the query in the folder **practice_tables**.*
 
 ---
 
@@ -46,7 +37,6 @@ INSERT INTO sales.orders VALUES
    * b) CURRENT\_DATE
    * c) AGE()
    * d) TODAY()
-     **Answer:** b) CURRENT\_DATE
 
 2. What does `ROUND(123.456, 1)` return?
 
@@ -54,7 +44,6 @@ INSERT INTO sales.orders VALUES
    * b) 123.5
    * c) 123.46
    * d) 124
-     **Answer:** b) 123.5
 
 3. Which function removes spaces from a string?
 
@@ -62,7 +51,6 @@ INSERT INTO sales.orders VALUES
    * b) REMOVE()
    * c) STRIP()
    * d) CUT()
-     **Answer:** a) TRIM()
 
 ---
 
@@ -72,3 +60,9 @@ INSERT INTO sales.orders VALUES
 2. How do you extract the year from a hire\_date column in PostgreSQL?
 
 ---
+
+### Answers
+
+1. ✅ **Answer:** b) CURRENT\_DATE
+2. ✅ **Answer:** b) 123.5
+3. ✅ **Answer:** a) TRIM()

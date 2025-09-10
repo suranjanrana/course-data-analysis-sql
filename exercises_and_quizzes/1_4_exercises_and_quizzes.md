@@ -41,7 +41,6 @@ We’ll continue with the same tables:
    * b) DISTINCT
    * c) ONLY
    * d) FILTER
-     **Answer:** b) DISTINCT
 
 2. What does `WHERE hire_date BETWEEN '2021-01-01' AND '2021-12-31'` return?
 
@@ -49,7 +48,6 @@ We’ll continue with the same tables:
    * b) Employees hired in the year 2021
    * c) Employees hired before 2021
    * d) Employees hired after 2021
-     **Answer:** b) Employees hired in the year 2021
 
 3. Which symbol is used in SQL for a wildcard (pattern matching)?
 
@@ -57,7 +55,6 @@ We’ll continue with the same tables:
    * b) %
    * c) #
    * d) &
-     **Answer:** b) %
 
 ---
 
@@ -65,3 +62,11 @@ We’ll continue with the same tables:
 
 1. Write a query to find all employees in the **Sales** department (deptid = 3).
 2. How do you sort employees by salary (highest first)?
+
+---
+
+### Answers
+
+1. ✅ **Answer:** b) DISTINCT
+2. ✅ **Answer:** b) Employees hired in the year 2021
+3. ✅ **Answer:** b) %
