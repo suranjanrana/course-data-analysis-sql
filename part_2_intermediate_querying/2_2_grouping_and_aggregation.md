@@ -238,20 +238,7 @@ ORDER BY hire_year;
 
 ---
 
-## 📝 Notes for Students
-
-* Use `HAVING` whenever your filter condition involves an **aggregate function** (`COUNT`, `SUM`, `AVG`, etc.).
-* `EXTRACT()` or `DATE_TRUNC()` (Postgres) help break down dates for grouping.
-* Different databases have slightly different date functions:
-
-  * **Postgres:** `DATE_TRUNC`, `EXTRACT`
-  * **MySQL:** `DATE_FORMAT`, `YEAR()`, `MONTH()`
-  * **SQL Server:** `FORMAT`, `YEAR()`, `MONTH()`
-* Always think about **granularity** (year vs. month vs. day) when grouping dates.
-
----
-
-## 6.6 Mixing GROUP BY with Other Clauses
+## 6.7 Mixing GROUP BY with Other Clauses
 
 ```sql
 -- Departments with avg salary above 65,000
@@ -265,12 +252,19 @@ ORDER BY avg_salary DESC;      -- sort results
 
 ---
 
-## 6.7 Notes for Students 📝
+## 📝 Notes
 
 * Always include **non-aggregated columns** in `GROUP BY`.
-* Use `HAVING` instead of `WHERE` for aggregate filters.
+* Use `HAVING` instead of `WHERE` whenever your filter condition involves an **aggregate function** (`COUNT`, `SUM`, `AVG`, etc.).
 * `COUNT(*)` counts all rows, while `COUNT(column)` ignores `NULL`.
 * Aggregations are **database independent** (same in Postgres, MySQL, SQL Server).
 * When combining `GROUP BY` with `ORDER BY`, think: group → aggregate → filter → sort.
+* `EXTRACT()` or `DATE_TRUNC()` (Postgres) help break down dates for grouping.
+* Different databases have slightly different date functions:
+
+  * **Postgres:** `DATE_TRUNC`, `EXTRACT`
+  * **MySQL:** `DATE_FORMAT`, `YEAR()`, `MONTH()`
+  * **SQL Server:** `FORMAT`, `YEAR()`, `MONTH()`
+* Always think about **granularity** (year vs. month vs. day) when grouping dates.
 
 ---

@@ -32,7 +32,7 @@ We’ll continue using:
 
 ---
 
-## Part D — Quiz
+## Quiz
 
 ### Multiple Choice
 
