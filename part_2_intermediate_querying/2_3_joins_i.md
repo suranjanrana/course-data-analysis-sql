@@ -49,7 +49,7 @@ NATURAL JOIN table2;
 
 ---
 
-## Practice Tables
+## 7.4 Practice Tables
 
 We’ll add more data in department and employees table:
 
@@ -65,7 +65,7 @@ INSERT INTO hr.employees (empid, firstname, deptid, location, salary) VALUES
 
 ---
 
-## INNER JOIN (Only matching rows)
+## 7.5 INNER JOIN (Only matching rows)
 
 ```sql
 SELECT e.firstname, d.deptname
@@ -80,7 +80,7 @@ ON e.deptid = d.deptid;
 
 ---
 
-## LEFT JOIN (All from left, matching from right)
+## 7.6 LEFT JOIN (All from left, matching from right)
 
 ```sql
 SELECT e.firstname, d.deptname
@@ -94,7 +94,7 @@ ON e.deptid = d.deptid;
 
 ---
 
-## RIGHT JOIN (All from right, matching from left)
+## 7.7 RIGHT JOIN (All from right, matching from left)
 
 ```sql
 SELECT e.firstname, d.deptname
@@ -108,7 +108,7 @@ ON e.deptid = d.deptid;
 
 ---
 
-## FULL JOIN (All rows from both sides)
+## 7.8 FULL JOIN (All rows from both sides)
 
 ```sql
 SELECT e.firstname, d.deptname
@@ -123,7 +123,7 @@ ON e.deptid = d.deptid;
 
 ---
 
-### NATURAL JOIN (automatic on matching column names)
+## 7.9 NATURAL JOIN (automatic on matching column names)
 
 ```sql
 SELECT firstname, deptname, location
@@ -135,7 +135,7 @@ NATURAL JOIN hr.departments;
 
 ---
 
-### USING clause (shorthand for equal column names)
+## 7.10 USING clause (shorthand for equal column names)
 
 ```sql
 SELECT firstname, deptname
@@ -146,7 +146,7 @@ JOIN hr.departments USING (deptid);
 
 ---
 
-### Multi-column Join (deptid + location)
+## 7.11 Multi-column Join (deptid + location)
 
 ```sql
 SELECT e.firstname, d.deptname, e.location
@@ -158,7 +158,7 @@ ON e.deptid = d.deptid AND e.location = d.location;
 
 ---
 
-## JOIN with Aggregation
+## 7.12 JOIN with Aggregation
 
 ```sql
 -- Count employees per department
@@ -172,7 +172,7 @@ GROUP BY d.deptname;
 
 ---
 
-## JOIN Across More Than Two Tables
+## 7.13 JOIN Across More Than Two Tables
 
 If we had an `orders` table with `empid` as salesperson:
 
@@ -188,7 +188,7 @@ GROUP BY e.firstname, d.deptname;
 
 ---
 
-## 📝 Notes
+## 7.14 Notes
 
 * **INNER JOIN** = intersection.
 * **LEFT JOIN** = preserve all from left table.
@@ -201,7 +201,7 @@ GROUP BY e.firstname, d.deptname;
 * When aggregating with joins, use **LEFT JOIN** if you want to keep categories with zero counts.
 * Watch out for **duplicate rows** when joining — if there are multiple matches, results multiply.
 
-## Other examples
+## 7.15 Other examples
 
 ### Scenario 1 — Find employees without departments
 

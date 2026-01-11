@@ -41,7 +41,7 @@ CROSS JOIN table2;
 
 ---
 
-## Practice table
+## 8.3 Practice table
 
 Let’s add a `managerid` column to `employees` for this example:
 
@@ -55,7 +55,7 @@ UPDATE hr.employees SET managerid = 3 WHERE empid = 5; -- Eve reports to Clara
 
 ```
 
-## Example (Self Join)
+## 8.4 Example (Self Join)
 
 ### Self Join (Employee–Manager relationship)
 
@@ -72,7 +72,7 @@ ON e.managerid = m.empid;
 
 ---
 
-## Example (Cross Join)
+## 8.5 Example (Cross Join)
 
 ### Cross Join (all combinations of departments and locations)
 
@@ -105,7 +105,7 @@ WHERE e.location = d.location;
 
 ---
 
-## Other examples
+## 8.6 Other examples
 
 ### Scenario 1 — Find employees reporting to the same manager
 
@@ -132,7 +132,7 @@ CROSS JOIN (VALUES (2021), (2022), (2023)) AS y(year);
 
 ---
 
-## 📝 Notes
+## 8.7 Notes
 
 * **SELF JOIN** is just a regular join, but the table is referenced twice.
 * Always use **aliases** (`e` and `m`) in self joins to avoid confusion.

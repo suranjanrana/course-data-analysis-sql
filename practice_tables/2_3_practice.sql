@@ -5,5 +5,5 @@ INSERT INTO hr.departments (deptid, deptname, location) VALUES
 
 
 INSERT INTO hr.employees (empid, firstname, deptid, location, salary) VALUES
-(104, 'Diana', 3, 'San Francisco', 80000),
-(105, 'Eve', NULL, 'Remote', 55000); -- employee without department
+(4, 'Diana', 3, 'San Francisco', 80000),
+(5, 'Eve', NULL, 'Remote', 55000); -- employee without department
