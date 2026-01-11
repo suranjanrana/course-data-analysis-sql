@@ -14,8 +14,6 @@ Why analysts use subqueries:
 - Perform step-by-step logic without temp tables
 - Replace complex joins in certain scenarios
 
----
-
 ## 9.2 Types of Subqueries
 
 | Type                | Description              | Analyst Use             |
@@ -26,8 +24,6 @@ Why analysts use subqueries:
 | Table Subquery      | Returns multiple rows    | Derived datasets        |
 | Correlated Subquery | Depends on outer query   | Row-wise logic          |
 | Nested Subqueries   | Subquery inside subquery | Complex analytics       |
-
----
 
 ## 9.3 General Syntax
 
@@ -40,8 +36,6 @@ WHERE column OPERATOR (
 );
 -- Inner query executes first
 ```
-
----
 
 ## 9.4 Scalar Subqueries
 
@@ -57,8 +51,6 @@ WHERE amount > (
 -- Scalar subquery calculates overall average sales value
 ```
 
----
-
 ## 9.5 Subqueries with IN / NOT IN
 
 ### Employees Who Have Made Sales
@@ -72,8 +64,6 @@ WHERE empid IN (
 );
 -- Identifies active sales employees
 ```
-
----
 
 ## 9.6 Subqueries in SELECT Clause
 
@@ -92,8 +82,6 @@ FROM hr.employees e;
 -- Returns NULL if employee has no sales
 ```
 
----
-
 ## 9.7 Correlated Subqueries
 
 ### Orders Above Employee’s Average Sale
@@ -110,6 +98,8 @@ WHERE amount > (
 -- Very common performance analysis pattern
 ```
 
+---
+
 ### Highest Sale Per Employee
 
 ```sql
@@ -122,8 +112,6 @@ WHERE amount = (
 );
 -- Finds best-performing deal per sales rep
 ```
-
----
 
 ## 9.8 Nested Subqueries (Advanced Analytics)
 
@@ -148,8 +136,6 @@ WHERE total_sales > (
 -- Identifies above-average performers
 ```
 
----
-
 ## 9.9 EXISTS
 
 ### Employees Who Have Made at Least One Sale (EXISTS)
@@ -166,6 +152,8 @@ WHERE EXISTS (
 -- Safer and faster than IN for large datasets
 ```
 
+---
+
 ### Employees With No Sales (NOT EXISTS)
 
 ```sql
@@ -179,8 +167,6 @@ WHERE NOT EXISTS (
 -- Identifies inactive or underperforming sales reps
 ```
 
----
-
 ## 9.10 Note
 
 - Subqueries execute inside -> outside
@@ -189,8 +175,6 @@ WHERE NOT EXISTS (
 - Correlated subquerrries can be slower than joins
 - Nested subqueries are powerful but harder to read
 - Use CTEs later for clarity
-
----
 
 ## 9.11 Other Examples
 
@@ -212,6 +196,8 @@ HAVING SUM(amount) > (
 -- Nested aggregation logic
 ```
 
+---
+
 ### Scenario 2: Employees With Sales Only in 2023
 
 ```sql
@@ -224,6 +210,8 @@ WHERE empid NOT IN (
 );
 -- Employees whose sales history starts in 2023
 ```
+
+---
 
 ### Scenario 3: Top Sale Per Employee
 

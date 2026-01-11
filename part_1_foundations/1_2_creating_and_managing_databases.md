@@ -6,8 +6,6 @@
 * Think of it like a **filing cabinet** where each drawer is a table, and each folder in the drawer is a row.
 * Different **Database Management Systems (DBMS)** exist: PostgreSQL, MySQL, SQL Server, Oracle.
 
----
-
 ## 2.2 What is a Schema?
 
 * A **schema** is a logical grouping of database objects (tables, views, functions).
@@ -22,8 +20,6 @@
 * You don’t always create schemas, but you will often query tables **inside schemas**.
 * In PostgreSQL, the default schema is `public`.
 * In SQL Server, the default schema is `dbo`.
-
----
 
 ## 2.3 Key Concepts & Definitions
 
@@ -41,8 +37,6 @@
   * `DEFAULT` — assigns a default value if none is provided.
 * **Serial / Identity** — special auto-incrementing column types in PostgreSQL.
 
----
-
 ## 2.4 Creating a Database
 
 **PostgreSQL / MySQL Syntax:**
@@ -57,8 +51,6 @@ CREATE DATABASE companydb;   -- create a new database called companydb
 CREATE DATABASE companydb;   -- same command works
 GO
 ```
-
----
 
 ## 2.5 Switching Between Databases
 
@@ -75,8 +67,6 @@ USE companydb; -- in MySQL
 USE companydb;
 ```
 
----
-
 ## 2.6 Creating a Schema
 
 **PostgreSQL / SQL Server:**
@@ -87,8 +77,6 @@ CREATE SCHEMA hr;   -- creates a new schema named hr
 
 **MySQL:**
 Schemas and databases are the same in MySQL.
-
----
 
 ## 2.7 Creating Table
 
@@ -101,6 +89,8 @@ CREATE TABLE table_name (
     ...
 );
 ```
+
+---
 
 ### Example
 
@@ -117,8 +107,6 @@ CREATE TABLE hr.employees (
 ```
 
 👉 Notice how we used `hr.employees` → schema name + table name.
-
----
 
 ## 2.8 Adding Relationships (Foreign Keys)
 
@@ -143,8 +131,6 @@ ADD CONSTRAINT fk_dept FOREIGN KEY (deptid)
 * In `employees`, we add `deptid INT` as a column.
 * `FOREIGN KEY (deptid) REFERENCES departments(deptid)` — ensures employees belong to a valid department.
 
----
-
 ## 2.9 ALTER TABLE — Modifying Tables
 
 PostgreSQL allows altering existing tables.
@@ -165,13 +151,13 @@ ALTER TABLE employees ALTER COLUMN salary TYPE NUMERIC(12,2);
 ALTER TABLE employees DROP COLUMN contact_number;
 ```
 
+---
+
 ### Example: Rename table
 
 ```sql
 ALTER TABLE employees RENAME TO staff;
 ```
-
----
 
 ## 2.10 Dropping (Deleting) Databases, Schemas, and Tables
 
@@ -201,8 +187,6 @@ DROP TABLE IF EXISTS employees CASCADE;
 ⚠️ **Important Note for Analysts:**
 You will **rarely** drop databases or schemas — that’s usually an admin’s job. But you should know what the commands do.
 
----
-
 ## 2.11 PostgreSQL Data Types (Commonly Used)
 
 | Category     | Examples                                                  | Notes                                      |
@@ -214,8 +198,6 @@ You will **rarely** drop databases or schemas — that’s usually an admin’s 
 | UUID         | `UUID`                                                    | For unique IDs across systems.             |
 | JSON / JSONB | `JSON`, `JSONB`                                           | For semi-structured data.                  |
 | Others       | `BYTEA` (binary), `ARRAY`, `ENUM`                         | Useful for special cases.                  |
-
----
 
 ## 📝 Notes
 

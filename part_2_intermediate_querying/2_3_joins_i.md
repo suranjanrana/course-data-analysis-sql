@@ -5,8 +5,6 @@
 * A **JOIN** is used to combine rows from two or more tables based on a related column (usually a **primary key** in one table and a **foreign key** in another).
 * Without joins, you can only query one table at a time — but real-world data is **spread across multiple tables**.
 
----
-
 ## 7.2 Types of Joins
 
 | Join Type        | Description                                                                                     | Example Use Case                                           |
@@ -21,8 +19,6 @@
 | **CROSS JOIN**   | All combinations                                                                                | Forecasting, combinations                                  |
 
 👉 Not all databases support `FULL JOIN` directly (e.g., MySQL doesn’t).
-
----
 
 ## 7.3 Syntax
 
@@ -47,8 +43,6 @@ NATURAL JOIN table2;
 
 👉 Best practice: prefer **explicit ON or USING** for clarity. NATURAL JOIN can create surprises if multiple columns match.
 
----
-
 ## 7.4 Practice Tables
 
 We’ll add more data in department and employees table:
@@ -63,8 +57,6 @@ INSERT INTO hr.employees (empid, firstname, deptid, location, salary) VALUES
 (105, 'Eve', NULL, 'Remote', 55000); -- employee without department
 ```
 
----
-
 ## 7.5 INNER JOIN (Only matching rows)
 
 ```sql
@@ -78,8 +70,6 @@ ON e.deptid = d.deptid;
 
 \-- Returns employees who are assigned to a department
 
----
-
 ## 7.6 LEFT JOIN (All from left, matching from right)
 
 ```sql
@@ -92,8 +82,6 @@ ON e.deptid = d.deptid;
 
 \-- Shows all employees, even if they have no department (deptname = NULL for Eve)
 
----
-
 ## 7.7 RIGHT JOIN (All from right, matching from left)
 
 ```sql
@@ -105,8 +93,6 @@ ON e.deptid = d.deptid;
 ```
 
 \-- Shows all departments, even if no employees are assigned (Finance will appear with NULL employee)
-
----
 
 ## 7.8 FULL JOIN (All rows from both sides)
 
@@ -121,8 +107,6 @@ ON e.deptid = d.deptid;
 
 \-- Shows all employees and all departments, filling NULLs where no match exists
 
----
-
 ## 7.9 NATURAL JOIN (automatic on matching column names)
 
 ```sql
@@ -133,8 +117,6 @@ NATURAL JOIN hr.departments;
 -- Be careful: both deptid and location exist in both tables
 ```
 
----
-
 ## 7.10 USING clause (shorthand for equal column names)
 
 ```sql
@@ -143,8 +125,6 @@ FROM hr.employees
 JOIN hr.departments USING (deptid);
 -- Cleaner syntax than ON e.deptid = d.deptid
 ```
-
----
 
 ## 7.11 Multi-column Join (deptid + location)
 
@@ -155,8 +135,6 @@ JOIN hr.departments d
 ON e.deptid = d.deptid AND e.location = d.location;
 -- Ensures match only if both deptid and location align
 ```
-
----
 
 ## 7.12 JOIN with Aggregation
 
@@ -170,8 +148,6 @@ GROUP BY d.deptname;
 -- Departments without employees still appear with count = 0
 ```
 
----
-
 ## 7.13 JOIN Across More Than Two Tables
 
 If we had an `orders` table with `empid` as salesperson:
@@ -182,9 +158,8 @@ FROM hr.employees e
 JOIN hr.departments d ON e.deptid = d.deptid
 JOIN sales.orders o ON e.empid = o.empid
 GROUP BY e.firstname, d.deptname;
+-- Combines employees, departments, and orders
 ```
-
-\-- Combines employees, departments, and orders
 
 ---
 

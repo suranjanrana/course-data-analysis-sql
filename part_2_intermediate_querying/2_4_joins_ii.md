@@ -1,7 +1,5 @@
 # Topic 8 — JOINS II (Self Join & Cross Join)
 
----
-
 ## 8.1 Self Join
 
 * A **SELF JOIN** is when a table is joined to itself.
@@ -17,8 +15,6 @@ ON a.key = b.key;
 ```
 
 👉 Both `a` and `b` are aliases for the same table.
-
----
 
 ## 8.2 Cross Join
 
@@ -38,8 +34,6 @@ CROSS JOIN table2;
 ```
 
 👉 No `ON` condition is needed (but you can add a `WHERE` later to filter).
-
----
 
 ## 8.3 Practice table
 
@@ -70,8 +64,6 @@ ON e.managerid = m.empid;
 -- Employees with no manager show manager = NULL
 ```
 
----
-
 ## 8.5 Example (Cross Join)
 
 ### Cross Join (all combinations of departments and locations)
@@ -82,6 +74,8 @@ FROM hr.departments d
 CROSS JOIN (VALUES ('New York'), ('Chicago'), ('San Francisco')) AS l(city);
 -- Produces every department with every city (Cartesian product)
 ```
+
+---
 
 ### Cross join employees with departments
 
@@ -102,8 +96,6 @@ FROM hr.employees e
 CROSS JOIN hr.departments d
 WHERE e.location = d.location;
 ```
-
----
 
 ## 8.6 Other examples
 
@@ -129,8 +121,6 @@ SELECT d.deptname, y.year
 FROM hr.departments d
 CROSS JOIN (VALUES (2021), (2022), (2023)) AS y(year);
 ```
-
----
 
 ## 8.7 Notes
 

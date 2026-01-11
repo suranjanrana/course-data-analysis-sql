@@ -17,8 +17,6 @@ LIMIT number;             -- restrict rows (Postgres/MySQL)
 
 👉 In SQL Server: use `TOP` instead of `LIMIT`.
 
----
-
 ## 4.2 Aliases (`AS`)
 
 * Aliases rename columns or tables to make results easier to read.
@@ -32,7 +30,9 @@ FROM hr.employees;
 -- Renames columns in the result for readability
 ```
 
-**Table alias:**
+---
+
+### Table alias
 
 ```sql
 SELECT e.firstname, d.deptname
@@ -41,8 +41,6 @@ JOIN hr.departments d ON e.deptid = d.deptid;
 ```
 
 📝 **Note:** Aliases don’t change the actual table/column, just the display in the query.
-
----
 
 ## 4.3 Filtering Data with WHERE
 
@@ -55,11 +53,11 @@ JOIN hr.departments d ON e.deptid = d.deptid;
   * List: `IN (...)`
   * Pattern: `LIKE`, `ILIKE` (case-insensitive in Postgres)
 
----
-
 ### Examples
 
 The `WHERE` clause filters rows that meet specific conditions.
+
+---
 
 #### Comparison Operators
 
@@ -95,6 +93,8 @@ FROM hr.employees
 WHERE salary <= 55000;
 ```
 
+---
+
 #### Logical Operators
 
 ```sql
@@ -114,6 +114,8 @@ FROM hr.employees
 WHERE NOT deptid = 3;
 ```
 
+---
+
 #### Range & Lists
 
 ```sql
@@ -127,6 +129,8 @@ SELECT firstname, hire_date
 FROM hr.employees
 WHERE hire_date BETWEEN '2021-01-01' AND '2021-12-31';
 ```
+
+---
 
 #### Pattern Matching
 
@@ -152,12 +156,12 @@ FROM hr.employees
 WHERE firstname ILIKE 'a%';  -- matches Alice, alice
 ```
 
+---
+
 📝 **Note:**
 
 * `%` matches **any sequence** of characters. `LIKE 'A%'` means “starts with A”. `%` is a wildcard.
 * `_` matches exactly **one character** (try `LIKE 'B_b'` → matches "Bob").
-
----
 
 ## 4.4 Sorting Data with ORDER BY
 
@@ -174,8 +178,6 @@ SELECT firstname, deptid, salary
 FROM hr.employees
 ORDER BY deptid ASC, salary DESC;
 ```
-
----
 
 ## 4.5 Limiting Rows
 

@@ -46,8 +46,6 @@ VALUES
 
 📝 **Note** Inserting multiple rows in one query is faster than inserting one by one.
 
----
-
 ## 3.2 UPDATE Statement
 
 * Used to **modify existing data** in a table.
@@ -97,8 +95,6 @@ WHERE deptid = 2;
 📝 **Note**
 Updating data permanently changes it. Always double-check your `WHERE` condition.
 
----
-
 ## 3.3 DELETE Statement
 
 * Used to **remove rows** from a table.
@@ -144,8 +140,6 @@ DELETE FROM sales.orders;
 
 * `DELETE` removes rows but keeps the table.
 * `DROP TABLE` removes the entire table structure — avoid this unless necessary.
-
----
 
 ## 3.4 Transactions (Optional but Useful for Analysts)
 

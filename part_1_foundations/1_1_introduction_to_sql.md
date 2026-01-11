@@ -19,8 +19,6 @@
 * SQL is **declarative**, meaning you tell the database *what* you want, not *how* to do it.
 * SQL commands are **not case-sensitive** (but keywords are often written in UPPERCASE for readability).
 
----
-
 ## 1.2 Types of SQL Commands
 
 SQL is broadly divided into categories:
@@ -35,8 +33,6 @@ SQL is broadly divided into categories:
 
 > 🔑 **Note for students**: As analysts, you’ll spend **80–90% of your time writing SELECT queries** and a bit of `INSERT`, `UPDATE`, and `DELETE`.
 
----
-
 ## 1.3 Database, Table, and Schema
 
 * **Database** → A collection of related data stored systematically.
@@ -47,8 +43,6 @@ SQL is broadly divided into categories:
 
 * **Schema** → A logical container for tables, views, procedures, etc. (like a folder inside a database).
 
----
-
 ## 1.4 Basic SQL Syntax Rules
 
 * SQL is **case-insensitive** (but it’s good practice to write keywords in UPPERCASE).
@@ -58,8 +52,6 @@ SQL is broadly divided into categories:
 
   * `-- single line comment`
   * `/* multi-line comment */`
-
----
 
 ## 1.5 SELECT — The Most Important Command
 
@@ -74,8 +66,6 @@ WHERE condition
 ORDER BY column ASC|DESC
 LIMIT number;
 ```
-
----
 
 ## 1.6 Examples (Cross-Database Compatible)
 
@@ -149,8 +139,6 @@ FROM employees;
 ```
 
 ✅ Shows only first 2 rows.
-
----
 
 ## 📝 Notes
 

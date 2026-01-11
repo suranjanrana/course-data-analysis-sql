@@ -13,8 +13,6 @@
 
 👉 Most functions are similar across PostgreSQL, MySQL, and SQL Server, but names differ slightly. I’ll note differences when needed.
 
----
-
 ## 5.2 String Functions
 
 | Function                               | Description              | Example                                      |
@@ -55,8 +53,6 @@ FROM hr.employees;
 
 👉 **Note:** Always check for extra spaces in text data (use `TRIM` or `LTRIM`/`RTRIM` in some databases).
 
----
-
 ## 5.3 Numeric Functions
 
 | Function                     | Description            | Example                      |
@@ -93,8 +89,6 @@ FROM hr.employees;
 ```
 
 👉 **Note for Analysts:** `ROUND` is very common when preparing reports, especially with currency.
-
----
 
 ## 5.4 Date & Time Functions
 
@@ -145,8 +139,6 @@ FROM sales.orders;
 * MySQL: `DATEDIFF`, `DATE_ADD`, `YEAR()`
 * SQL Server: `DATEDIFF`, `DATEADD`, `YEAR()`
 
----
-
 ## 5.5 Aggregate Functions
 
 Aggregate functions are **the bread and butter of data analysis**.
@@ -189,8 +181,6 @@ GROUP BY deptid;
 
 * 👉 `GROUP BY` is needed when you want aggregates **per group**, not the whole table.
 * 👉 `COUNT`, `SUM`, `AVG`, `MIN`, `MAX` are the **most common starting point** when preparing dashboards or reports.
-
----
 
 ## 📝 Notes
 
