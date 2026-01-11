@@ -36,7 +36,7 @@ Please download the "**Pixar Films**" data from the following website:
    2. [GROUP BY and Aggregation](part_2_intermediate_querying/2_2_grouping_and_aggregation.md)
    3. [Joins I (INNER, LEFT, RIGHT, FULL)](part_2_intermediate_querying/2_3_joins_i.md)
    4. [Joins II (SELF JOIN, CROSS JOIN)](part_2_intermediate_querying/2_4_joins_ii.md)
-   5. Subqueries
+   5. [Subqueries](part_2_intermediate_querying/2_5_subqueries.md)
    6. Set Operations (UNION, INTERSECT, EXCEPT)
 3. **Part 3 — Analyst-Oriented Advanced Topics**
    1. Window Functions
