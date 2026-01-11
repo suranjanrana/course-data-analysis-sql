@@ -55,7 +55,9 @@ UPDATE hr.employees SET managerid = 3 WHERE empid = 5; -- Eve reports to Clara
 
 ```
 
-## Example: Self Join (Employee–Manager relationship)
+## Example (Self Join)
+
+### Self Join (Employee–Manager relationship)
 
 ```sql
 -- List employees with their managers
@@ -70,7 +72,9 @@ ON e.managerid = m.empid;
 
 ---
 
-## Example: Cross Join (all combinations of departments and locations)
+## Example (Cross Join)
+
+### Cross Join (all combinations of departments and locations)
 
 ```sql
 SELECT d.deptname, l.city
@@ -79,7 +83,7 @@ CROSS JOIN (VALUES ('New York'), ('Chicago'), ('San Francisco')) AS l(city);
 -- Produces every department with every city (Cartesian product)
 ```
 
-## Example: Cross join employees with departments
+### Cross join employees with departments
 
 ```sql
 -- not meaningful without filter

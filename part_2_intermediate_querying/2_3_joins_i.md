@@ -17,6 +17,8 @@
 | **FULL JOIN**    | Returns rows when there is a match in either table                                              | Union of left and right join results (who’s missing where) |
 | **NATURAL JOIN** | Automatically joins on columns with the same name                                               | Simplified syntax (but less explicit)                      |
 | **USING clause** | Shorthand when join column names are the same                                                   | Cleaner queries                                            |
+| **SELF JOIN**    | Table joined to itself                                                                          | Hierarchies, comparisons                                   |
+| **CROSS JOIN**   | All combinations                                                                                | Forecasting, combinations                                  |
 
 👉 Not all databases support `FULL JOIN` directly (e.g., MySQL doesn’t).
 

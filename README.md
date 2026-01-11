@@ -32,10 +32,10 @@ Please download the "**Pixar Films**" data from the following website:
       4. LIMIT / TOP for row restriction
       5. DISTINCT for unique values
 2. **Part 2 — Intermediate Querying**
-   1. [****Functions in SQL** (String, Numeric, Date, Aggregate)**](part_2_intermediate_querying/2_1_functions_in_sql.md)
+   1. [Functions in SQL (String, Numeric, Date, Aggregate)](part_2_intermediate_querying/2_1_functions_in_sql.md)
    2. [GROUP BY and Aggregation](part_2_intermediate_querying/2_2_grouping_and_aggregation.md)
-   3. ****Joins I** (INNER, LEFT, RIGHT, FULL)
-   4. ****Joins II** (SELF JOIN, CROSS JOIN)
+   3. [Joins I (INNER, LEFT, RIGHT, FULL)](part_2_intermediate_querying/2_3_joins_i.md)
+   4. [Joins II (SELF JOIN, CROSS JOIN)](part_2_intermediate_querying/2_4_joins_ii.md)
    5. Subqueries
    6. Set Operations (UNION, INTERSECT, EXCEPT)
 3. **Part 3 — Analyst-Oriented Advanced Topics**

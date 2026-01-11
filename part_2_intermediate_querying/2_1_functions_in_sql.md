@@ -17,14 +17,14 @@
 
 ## 5.2 String Functions
 
-| Function                               | Description              | Example                                       |
-| -------------------------------------- | ------------------------ | --------------------------------------------- |
-| `UPPER(str)`                           | Convert to uppercase     | `UPPER('hello') → 'HELLO'`                    |
-| `LOWER(str)`                           | Convert to lowercase     | `LOWER('HELLO') → 'hello'`                    |
-| `LENGTH(str)`                          | Get number of characters | `LENGTH('SQL') → 3`                           |
-| `TRIM(str)`                            | Remove spaces            | `TRIM('  hi  ') → 'hi'`                       |
-| `SUBSTRING(str FROM start FOR length)` | Extract part of a string | `SUBSTRING('Analysis' FROM 1 FOR 4) → 'Anal'` |
-| `CONCAT(a, b)`                         | Join strings             | `CONCAT('Data', 'Science') → 'DataScience'`   |
+| Function                               | Description              | Example                                      |
+| -------------------------------------- | ------------------------ | -------------------------------------------- |
+| `UPPER(str)`                           | Convert to uppercase     | `UPPER('hello') → 'HELLO'`                   |
+| `LOWER(str)`                           | Convert to lowercase     | `LOWER('HELLO') → 'hello'`                   |
+| `LENGTH(str)`                          | Get number of characters | `LENGTH('SQL') → 3`                          |
+| `TRIM(str)`                            | Remove spaces            | `TRIM('  hi  ') → 'hi'`                      |
+| `SUBSTRING(str FROM start FOR length)` | Extract part of a string | `SUBSTRING('Analysis' FROM 1 FOR 3) → 'Ana'` |
+| `CONCAT(a, b)`                         | Join strings             | `CONCAT('Data', 'Science') → 'DataScience'`  |
 
 **Example:**
 
