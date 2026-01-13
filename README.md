@@ -40,7 +40,7 @@ Please download the "**Pixar Films**" data from the following website:
    6. [Set Operations (UNION, INTERSECT, EXCEPT)](part_2_intermediate_querying/2_6_set_operations.md)
 3. **Part 3 — Analyst-Oriented Advanced Topics**
    1. [Window Functions](part_3_advanced_topics/3_1_window_functions.md)
-   2. CTEs (Common Table Expressions)
+   2. [CTEs (Common Table Expressions)](part_3_advanced_topics/3_2_ctes.md)
    3. Working with Nulls
    4. Case Statements \& Conditional Logic
    5. Best Practices for Analysts (Efficiency \& Readability)
